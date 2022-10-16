@@ -6,10 +6,10 @@ h1 {
     font-size: 40px;
 }
 
-/* Universal Selector */
-* {
-    /* color : green; */
-}
+/* Universal Selector
+*{
+     color : green; 
+} */
 
 /* tag / element selector  */
 small {
@@ -139,3 +139,79 @@ a:visited {
 .header{
     padding-top: 50px;
 }
+/* Grid */
+.gridone ,.gridtwo,.gridthree,.gridFour div{
+    padding: 20px;
+    color:black;
+    text-align: center;
+}
+.gridone,.gridthree,.gridFour{
+    display: grid;
+    /* grid-template-columns: auto auto auto ; */
+    /* grid-template-columns: 400px 600px auto ; */
+    grid-template-columns: 400px 600px auto ;
+    grid-gap: 40px;
+}
+.gridtwo{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* grid-column-gap:50px; */
+    /* grid-row-gap:100px */
+     grid-gap: 40px;
+}
+.columnadd{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.rowadd{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.relative_parent{
+    border:1px solid red;
+    width: 1000px;
+    height: 400px;
+
+}
+.relative{
+    border: 1px solid green;
+    width: 400px;
+    height: 200px;
+    position: relative;
+    top: 50px;
+    left: 100px;
+}
+   .absolute_parent{
+    border:1px solid yellow;
+    width: 1000px;
+    height: 400px;
+    position: relative;
+   }
+   .absolute{
+    border:1px solid black;
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 50px;
+   }
+   .fixed{
+    position: fixed;
+    top: 50px;
+    left: 100px;
+   }
+    /* Font */
+    .online{
+        font-family: 'Dancing Script', cursive;
+    }
+/* Offline */
+    @font-face {
+        font-family:pecifico ;
+        src: url(font/Pacifico-Regular.ttf);
+    }
+    .offline{
+        font-family:pecifico ;
+    }
+    i{
+        font-size: 30px;
+        color: blue;
+    }
