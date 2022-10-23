@@ -116,3 +116,31 @@
 .new_arrial_icon{
     padding-right: 20px;
 }
+.blog{
+    border-left: 4px solid cyan;
+    margin-left: 100px;
+    margin-top: 30px;
+    padding-left: 40px;
+    
+}
+.blog_image{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-left: 70px;
+    padding-top: 20px;
+
+}
+
+.img{
+    border-radius: 3%;
+    display:block;
+}
+.date{
+    display: inline-block;
+    color:blue;
+
+}
+.read_more{
+    text-decoration:none;
+    color: blue;
+}
