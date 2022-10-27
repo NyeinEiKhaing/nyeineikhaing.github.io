@@ -125,22 +125,267 @@
 }
 .blog_image{
     display: grid;
+    box-shadow:-3px 4px 10px rgba(88, 232, 114, 0.2);
     grid-template-columns: auto auto auto;
     margin-left: 70px;
+    margin-right: 70px;
     padding-top: 20px;
+    grid-column-gap: 30px;
 
 }
 
 .img{
-    border-radius: 3%;
+    border-radius:5px 5px 0px 0px;
+    width: 100%;
+    height: 250px;
     display:block;
+    transition: 0.5s ease;
 }
 .date{
     display: inline-block;
     color:blue;
+    font-size: small;
 
 }
 .read_more{
     text-decoration:none;
     color: blue;
+    margin-top: 10px;
+    display: inline-block;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
 }
+.detail{
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.img:hover{
+    transform: scale(1.3);
+
+}
+.blog_img_zoom{
+    width: 100%;
+    height:250px ;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 5px 5px 0px 0px;
+}
+.avaible_image{
+    display: inline-block;
+    width: 220px;
+    height: 200px;
+    background-image: url(../images/iPhone12.png);
+    transition-duration: .3s;
+    transition-timing-function:ease ;
+}
+.avaible_image:hover{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/iPhone12\ pro.png);
+    background-repeat: no-repeat;
+}
+.more_items{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.more_items a{
+    color: blue;
+    
+}
+.support div p{
+    display: inline-block;
+    padding-left: 20px;
+
+}
+.support{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    /* margin-top: 50px; */
+    padding: 30px;
+    background-color: gray;
+
+}
+.support div p b{
+    font-size: 24px;
+}
+.footer{
+    background-color: black;
+    padding-top: 50px;
+}
+.footer_nav{
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.design_by{
+    color: gray;
+    margin-top: 20px;
+}
+.footer_icon{
+    color: grey;
+    display: inline-block;
+    margin: 20px 20px 50px 20px;
+
+}
+/* start about */
+.about{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 0px 50px;
+    grid-column-gap: 50px;
+    margin-bottom: 50px;
+}
+.ss_image{
+    display: inline;
+    width: 500px;
+    height: 350px;
+    margin-top: 50px;
+    margin-left: 30px;
+    float: left;
+    opacity: 1;
+
+}
+.aboutus_header{
+    color:  blue;
+    margin-top: 150px;
+    margin-bottom: 30px;
+    font-size:xx-large;
+}
+.about_page{
+    display: inline-block;
+}
+.learn_more{
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .form input,textarea,button{
+    display: block;
+    margin: auto;
+    margin: 10px auto;
+    
+}
+  .form{
+    margin: auto;
+    width: 500px;
+    height: auto;
+    padding: 50px;
+    background-color: rgba(255, 99, 71, 0);
+    padding-top: 50px;
+    border-radius: 30px;
+    
+  }
+  .form input{
+    height: 30px;
+    
+  }
+  .form input,textarea{
+    width: 400px;
+    border-radius: 10px;
+  }
+  .form button{
+    width: 100px;
+    height: 30px;
+   margin-top: 20px;
+   border-radius: 10px;
+  }
+  .form h2{
+    margin-bottom: 30px;
+    color: white;
+  }
+  .contact_bg{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 50px;
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/142/751/831/landscape-anime-digital-art-fantasy-art-wallpaper-preview.jpg);
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  .map{
+    margin-top: 50px;
+    
+  }
+  .map iframe{
+    border-radius: 10px;
+  }
+  .blog_page{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 50px;
+    grid-row-gap: 30px;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  /* start services */
+  h1{
+    margin-top: 50px;
+    color: blueviolet;
+  }
+  .customer_services h2{
+     display: inline-block;
+  }
+
+.customer_services{
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-top: 50px;
+    margin-left: 30px;
+    background-color: bisque;
+    color: blueviolet;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+
+}
+/* end services page*/
+
+/* start product page */
+.ios_product{
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.samproduct_page{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin-left: 70px;
+    margin-right: 70px;
+    text-align: center;
+    grid-column-gap: 50px;
+    margin-bottom: 50px;
+}
+.sam_product{
+    padding-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.sam_image{
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+/* end product page */
