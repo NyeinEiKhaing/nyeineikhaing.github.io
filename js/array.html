@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Array</h1>
+    <script>
+        // Array
+        let studentList=['Mg Mg','Kyaw Kyaw','Aung Aung'];
+        console.log(studentList);
+        studentList.push('Aye Aye');
+        console.log(studentList);
+        studentList.unshift('Hla Hla');
+        console.log(studentList);
+        studentList.pop();
+        console.log(studentList);
+        studentList.shift();
+        console.log(studentList);
+        studentList.sort();
+        console.log(studentList);
+        studentList.reverse();
+        console.log(studentList);
+
+        let stuListStr=studentList.toString();
+        console.log(stuListStr);
+        
+        let studentListArray=stuListStr.split(',');
+        console.log(studentListArray);
+
+        let studentListArr=['Ma Ma','Hla Hla'];
+        let studentListArr2=['Mya Mya','Tun Tun'];
+        let result=studentList.concat(studentListArr);
+        console.log(result);
+
+        let multiArray=[...studentList,...studentListArr,...studentListArr2];
+        console.log(multiArray);
+
+        let arrayConcat=result.concat(studentListArr2);
+        console.log(arrayConcat);
+
+        // object
+        let student1={
+            roll:1,
+            name:'Ahe Htoo Naw',
+            email:'ahehtoonaw@gmail.com',
+            major:'High School',
+            phone:0912656342,
+            age:18,
+            address:'Mandalay'
+        }
+        let student2={
+            roll:2,
+            name:'Aung Myat Thu',
+            email:'aungmyatthu@gmail.com',
+            major:'IT Major',
+            phone:091594612,
+            age:23,
+            address:'Yangon'
+        }
+        let student3={
+            roll:3,
+            name:'Ei Chan',
+            email:'eichan@gmail.com',
+            major:'IT Major',
+            phone:0915849313,
+            age:27,
+            address:'singapore'
+        }
+        let studentListArray1=[student1,student2];
+        studentListArray1.push(student3);
+        console.log(studentListArray1);
+
+
+    </script>
+</body>
+</html>
