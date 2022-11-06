@@ -12,30 +12,71 @@
     <form action="" name="myForm">
         Name : <input type="text" name="name" id="name"><br>
         Age : <input type="number" name="age"><br>
-        City : <input type="text" name="City"><br>
+        City : <input type="text" name="city"><br>
         <button type="button" onclick=showData()>Add Student</button>
+        <button onclick="sayHi()">Click Me</button>
     </form>
     <h2>Student List</h2>
     <table border="1" cellpadding="10">
-        <thead>
-            <tr>
-                <td>No</td>
-                <td>Name</td>
-                <td>Age</td>
-                <td>City</td>
-            </tr>
-        </thead>
+        <tbody  id="myData">
+            <thead>
+                <tr>
+                    <td>No</td>
+                    <td>Name</td>
+                    <td>Age</td>
+                    <td>City</td>
+                </tr>
+            </thead>
+        </tbody>
+        
     </table>
     <script>
+        let studentListArray=[];
         function showData(){
-            // let name=document.myForm.name.value;
-            // console.log(name);
-            // let age=document.myForm.age.value;
-            // console.log(age);
-            // let city=document.myForm.city.value;
-            // console.log(city);
-            let name = document.getElementById('name') .value;
+
+            // get data
+            let name=document.myForm.name.value;
             console.log(name);
+            let age=document.myForm.age.value;
+            console.log(age);
+            let city=document.myForm.city.value;
+            console.log(city);
+            // let name = document.getElementById('name') .value;
+            // console.log(name,age,city);
+
+            // add data to array
+            let student={
+                studentName:name,
+                studentAge: age,
+                studentCity:city
+            }     
+            // console.log(student);
+            studentListArray.push(student);
+
+            // show data
+            console.log(studentListArray);
+            let data = '';
+            for(let i=0;i < studentListArray.length;i++){
+                // console.log(studentListArray[i]);
+                let studentList = studentListArray[i];
+                data = data +`
+                    <tr>
+                        <td> ${i+1}</td> 
+                        <td> ${studentList.studentName}</td>
+                        <td> ${studentList.studentAge}</td>
+                        <td> ${studentList.studentCity}</td>
+                     </tr>`;
+            }
+            document.getElementById('myData').innerHTML = data;
+        }
+
+        function sayHi(){
+            let ans=confirm('Go to Youtube?');
+            if(ans){
+                document.location.href ='https://www.youtube.com/';
+            }else{
+                document.location.href ='https://www.google.com/';
+            }
         }
     </script>
     
