@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Register Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Student Register Form</h1>
+    <form action="" name="myForm">
+        Name : <input type="text" name="name" id="name"><br>
+        Age : <input type="number" name="age"><br>
+        City : <input type="text" name="City"><br>
+        <button type="button" onclick=showData()>Add Student</button>
+    </form>
+    <h2>Student List</h2>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <td>No</td>
+                <td>Name</td>
+                <td>Age</td>
+                <td>City</td>
+            </tr>
+        </thead>
+    </table>
+    <script>
+        function showData(){
+            // let name=document.myForm.name.value;
+            // console.log(name);
+            // let age=document.myForm.age.value;
+            // console.log(age);
+            // let city=document.myForm.city.value;
+            // console.log(city);
+            let name = document.getElementById('name') .value;
+            console.log(name);
+        }
+    </script>
+    
+</body>
+</html>

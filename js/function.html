@@ -14,7 +14,25 @@
             document.write(`<h2>This is function Method</h2>`)
         }
        show();
-       show();
+       
+       function multi(num){
+        document.write(`This is multi result : ${2 ** num}<br>`);
+       }
+       multi(3);
+       multi(6);
+
+       function sum(num1=50,num2=100){
+        document.write(`This is sum result : ${num1 + num2}<br>`);
+       }
+       sum();
+
+       function returnValue(num1,num2,num3){
+        let result=num1*num2*num3;
+        return result;
+       }
+      let returnValueResult= returnValue(5,10,5);
+       document.write(`This is returnValue result : ${returnValueResult}`);
+
     </script>
     
 </body>

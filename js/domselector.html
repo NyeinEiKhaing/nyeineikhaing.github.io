@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom selector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="heading"> Dom Selector Lessons</h1>
+    <P id="myId">Id <i> selector</i></P>
+    <p class="myClass">Class 1 Selector</p>
+    <p class="myClass">Class 2 Selector</p>
+    <p class="myClass">Class 3 Selector</p>
+    <p>Tag Selector</p>
+    <p>Qrery Selector</p>
+    <button onclick="show()">Click Me</button>
+
+    <script>
+        function show(){
+            // alert("ok")
+
+            // id selector
+            let myId=document.getElementById('myId');
+            console.log(myId.innerHTML);
+            console.log(myId.innerText);
+
+            // class selector
+            let myClass=document.getElementsByClassName('myClass');
+            console.log(myClass);
+            console.log(myClass[2].innerText);
+
+            // tag selector
+            let myTagName=document.getElementsByTagName('p');
+            console.log(myTagName);
+            console.log(myTagName[4].innerText);
+
+            // Query Selector
+            let myQuerySelector =document.querySelector('#myId');
+            console.log(myQuerySelector);
+            console.log(myQuerySelector.innerText);
+            console.log(myQuerySelector.innerHTML);
+
+            let querySelectorClass=document.querySelector('.myClass');
+            console.log(querySelectorClass);
+
+            querySelectorClassAll=document.querySelectorAll('.myClass');
+            console.log(querySelectorClassAll);
+
+            let querySelectorTag = document.querySelector('p');
+            console.log(querySelectorTag);
+
+            // update
+            let heading =document.getElementById('heading');
+            heading.innerHTML ="Dom Selector Lessons <i> Update</i>";
+        }
+    </script>
+</body>
+</html>
