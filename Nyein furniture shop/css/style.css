@@ -1,0 +1,342 @@
+*{
+    padding:0;
+    margin: 0;
+}
+/* start nav */
+.nav_first{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    padding: 30px 100px;
+    background-color:peru;
+    color:white;
+    text-shadow:2px 3px 4px black;
+    
+}
+.fa-user{
+    display:inline-block;
+    margin: 0px 20px;
+
+}
+.fa-user,.fa-magnifying-glass,.fa-cart-shopping,.fa-bars{
+    font-size: 20px;
+}
+span{
+    font-size: 20px;
+}
+
+.sub_nav{
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+    justify-content: space-between;
+    padding: 30px 400px;
+}
+.navbar, .dropdown{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:rgb(213, 112, 10);
+    text-shadow:1px 2px 3px gray;
+    font-weight: 800; 
+}
+/* .sub_nav div a:hover{
+   font-size: 20px;
+   transition-duration: .6s;
+   text-decoration: underline;
+} */
+.w3rcontainer{
+    border: 1px solid 
+ #cccfdb;
+    border-radius: 2px;
+ } 
+ .hover-underline-animation {
+   display: inline-block;
+   position: relative;
+ }
+ 
+ .hover-underline-animation:after {
+   content: '';
+   position: absolute;
+   width: 100%;
+   transform: scaleX(0);
+   height: 2px;
+   bottom: 0;
+   left: 0;
+   background-color: 
+ peru;
+    transform-origin: bottom right;
+   transition: transform 0.25s ease-out;
+ }
+ 
+ .hover-underline-animation:hover:after {
+   transform: scaleX(1);
+   transform-origin: bottom left;
+   margin-bottom: -20px;
+ }
+
+ /* start drop down list */
+ .dropbtn {
+    /* background-color: #4CAF50; */
+    color: peru;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    background-color: white;
+  }
+  
+  .dropdown-content a {
+    color:brown;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-transform: capitalize;
+  }
+  
+  .dropdown-content a:hover {
+    background-color:gray;
+    color: white;
+}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: white;
+  }
+
+/* start home */
+.home{
+/* start home */
+    background-image: url(https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    width:100%;
+    height: 560px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.text h3{
+    font-size: 40px;
+    color: peru;
+    text-shadow: 2px 3px 4px gray;
+}
+.text a{
+    text-decoration: none;
+}
+.text{
+    text-align: center;
+    padding-top: 30px;
+
+}
+.contactnow{
+    font-size: 20px;
+    background-color: peru;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 4px gray;
+}
+.contact{
+    margin-top: 50px;
+}
+/* end home */
+
+/* start features */
+.checked{
+    color: orange;
+}
+.hot{
+    position: relative;
+    top: 20px;
+    left: 10px;
+    background-color: peru;
+    color: white;
+    padding: 3px 5px;
+    border-radius: 3px;
+    width: 35px;
+}
+.hot_card{
+  width: 100%;
+}
+.feature{
+  display:grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-column-gap: 50px;
+  padding: 20px 200px;
+}
+.header{
+  text-align: center;
+  margin: 30px ;
+  color: peru;
+  text-shadow: 2px 3px 4px gray;
+}
+.underline{
+  width: 1000px;
+  margin: auto;
+}
+/* end features */
+
+/* start product */
+.product{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 100px;
+  padding: 50px 200px;
+}
+.product p{
+  font-size: 20px;
+  text-align: center;
+}
+/* end product */
+
+/* start product brand */
+.brandname{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 100px;
+  padding: 50px 200px;
+}
+/* end product brand */
+
+/* start footer */
+footer{
+    background-color: peru;
+    text-align: center;
+    color: white;
+    padding: 30px 0px;
+}
+.footer_nav{
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+    justify-content: space-between;
+    padding: 0px 400px;
+    padding-bottom: 20px;
+}
+.footer_nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+.footer_icon{
+  display: inline-block;
+  margin: 20px 20px 50px 20px;
+  font-size: 30px;
+}
+/* end footer */
+
+/* start about */
+.aboutus{
+  background-color:rgba(214, 158, 102,1);
+  text-shadow: 2px 3px 4px black;
+  color: white;
+  margin:auto;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: space-between;
+}
+.nyein{
+  padding-top: 30px;
+  text-align: center;
+  color: peru;
+}
+.para{
+  font-size: 20px;
+  padding: 15px 100px;
+  width: 50%;
+  margin: auto;
+  line-height: 35px;
+  color: gray;
+}
+/* end about */
+
+/* start contact img */
+.contactimg{
+  background-image: url(https://img.freepik.com/free-photo/modern-living-room-interior-with-sofa-green-plants-lamp-table-dark-wall-background_41470-1528.jpg?w=1060&t=st=1667830126~exp=1667830726~hmac=eafd105092c3029e095ca5fec7a8304f4d4f97387c0ff0954bc5b7d0d9eface1);
+  width: 100%;
+  height:560px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 10px 0px;
+}
+.contacttext{
+  margin:50px 0px 0px 50px;
+}
+.contacttext input{
+  margin-bottom: 10px;
+  width: 250px;
+  height: 30px;
+  border-radius: 10px;
+  padding-left: 10px;
+  border: none;
+}
+.contacttext textarea{
+  margin-bottom: 10px;
+  width: 250px;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  border: none;
+}
+.btn{
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+}
+.contactmap{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  padding: 50px 300px;
+}
+.contactmap iframe{
+  border-radius: 10px;
+}
+/* end contact img */
+
+/* start furniture cataloug */
+.sec_nav{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  justify-content: space-between;
+  padding: 20px 200px;
+  background-color:rgba(214, 158, 102,1);
+}
+.sec_nav a{
+  text-decoration: none;
+  color: white;
+  text-shadow: 2px 3px 4px black;
+}
+/* end furniture cataloug */
+
+/* start bedroom */
+.bedroom{
+border-left: 7px solid peru;
+margin: 50px 50px;
+padding-left: 50px;
+color: peru;
+text-shadow: 2px 3px 4px gray;
+}
+.bed{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 20px;
+  justify-content: space-between;
+  margin:50px 100px;
+}
+/* end bedroom */
