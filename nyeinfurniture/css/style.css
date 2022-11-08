@@ -152,6 +152,13 @@ span{
 .contact{
     margin-top: 50px;
 }
+marquee{
+  margin-top: 50px;
+  color: peru;
+  font-size: 25px;
+  text-shadow: 2px 3px 4px black;
+  font-weight: 600;
+}
 /* end home */
 
 /* start features */
@@ -232,8 +239,12 @@ footer{
 }
 .footer_icon{
   display: inline-block;
-  margin: 20px 20px 50px 20px;
+  margin: 20px 20px 20px 20px;
   font-size: 30px;
+}
+.fa-facebook,.fa-facebook-messenger,.fa-viber{
+  color: white;
+
 }
 /* end footer */
 
@@ -338,5 +349,12 @@ text-shadow: 2px 3px 4px gray;
   grid-gap: 20px;
   justify-content: space-between;
   margin:50px 100px;
+}
+.bed_card{
+  cursor: pointer;
+}
+.bed_card a{
+  text-decoration: none;
+  color: black;
 }
 /* end bedroom */

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Cost</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Food Cost</h1>
+    <form action="" name="myForm">
+        Date :<input type="date" name="date"><br>
+        Amount :<input type="number" name="amount"><br>
+        <button type="button" onclick="show()">Click Me</button>
+    </form>
+
+    <h2>Monthly Food Cost</h2>
+    <table  border="1" cellpadding="10">
+        <tbody id="myData">
+            <thead>
+                <tr>
+                    <td>No</td>
+                    <td>Date</td>
+                    <td>Amount</td>
+                    <td>Total</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Grand Total</td>
+                    <td id="grand_total"></td>
+                </tr>
+            </thead>
+            
+        </tbody>
+    </table>
+
+    <script>
+        let foodGrandTotalArray = [];
+        function show(){
+            let date = document.myForm.date.value;
+            let amount = document.myForm.amount.value;
+            let total = document.myForm.amount.value;
+
+            let food ={
+                foodDate:date,
+                foodAmount:amount,
+                foodTotal:total
+            }
+            foodGrandTotalArray.push(food);
+
+            let data ='';         
+            for(let i=0;i<foodGrandTotal.length;i++){
+                let foodCostList = foodGrandTotalArray[i] ;
+                data = data + `
+                    <tr>
+                        <td>${i+1}</td>
+                        <td>${foodCostList.foodDate}</td>
+                        <td>${foodCostList.foodAmount}</td>
+                        <td>${foodCostList.foodTotal}</td>
+                    </tr>`;
+            }
+
+            document.getElementById('myData') = data;
+
+            for(let j=0;j<data.length;j++){
+                let granttoatl =``;
+            }
+            
+        }
+    </script>
+</body>
+</html>
