@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriculation Exam Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Matriculation Exam Result</h1>
+    <form name="myForm" id="form">
+        <div class="row">
+            <div class="mark">
+                Name :
+            </div>
+            <div class="mark_number">
+                <input type="text" name="name" id="name"> <br><span class="error"></span>
+            </div>
+        </div>
+
+       <div class="row">
+        <div class="mark">
+            Myanmar Mark :
+        </div>
+        <div>
+            <input type="number" name="myanmar" id="myanmar">  <br><span class="error"></span>
+        </div>
+       </div>
+        
+       <div class="row">
+        <div class="mark">
+            English Mark : 
+        </div>
+        <div>
+            <input type="number" name="english" id="english"> <br><span class="error"></span>
+        </div>
+       </div>
+        
+       <div class="row">
+        <div class="mark">
+            Mathematics Mark :
+        </div>
+        <div>
+            <input type="number" name="mathematics" id="mathematics"> <br><span class="error"></span>
+        </div>
+       </div>
+        
+       <div class="row">
+        <div class="mark">
+            Chemistry Mark : 
+        </div>
+        <div>
+            <input type="number" name="chemistry" id="chemistry"> <br><span class="error"></span>
+        </div>
+       </div>
+        
+       <div class="row">
+        <div class="mark">
+            Physics Mark : 
+        </div>
+        <div>
+            <input type="number" name="physics" id="physics"> <br><span class="error"></span> 
+        </div>
+       </div>
+        
+       <div class="row">
+        <div class="mark">
+            Biology Mark : 
+        </div>
+        <div>
+            <input type="number" name="biology" id="biology"> <br><span class="error"></span>
+        </div>
+       </div>
+       <div class="row">
+        <div class="mark">
+
+        </div>
+        <div>
+         <button type="submit">Submit</button>
+        </div>
+       </div>
+       
+        
+        
+    </form>
+    <div class="header_table">
+        <h2>Matriculation Exam Result</h2>
+    <table  border="1" cellpadding="10" class="table_align">
+        <thead>
+            <tr>
+                <td>No</td>
+                <td>Name</td>
+                <td>Myanmar</td>
+                <td>English</td>
+                <td>Mathematics</td>
+                <td>Chemistry</td>
+                <td>Physics</td>
+                <td>Biology</td>
+                <td>Total</td>
+            </tr>
+            
+        </thead>
+        <tbody id="myData">
+            
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3"> Pass or Fail</td>
+                <td colspan="6" id="pass_fail"></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    </div>
+    
+    <script>
+
+const form = document.getElementById('form');
+const fname = document.getElementById('name');
+const myanMark = document.getElementById('myanmar');
+const engMark = document.getElementById('english');
+const mathMark = document.getElementById('mathematics');
+const cheMark = document.getElementById('chemistry');
+const phyMark = document.getElementById('physics');
+const bioMark = document.getElementById('biology');
+
+form.addEventListener('submit', e=>{
+    e.preventDefault();
+
+    validateInputs();
+});
+
+const setError = (element, message) =>{
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success');
+}
+
+const setSuccess = element =>{
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+}
+
+const validateInputs = () =>{
+    const fnameValue = fname.value.trim();
+    const myanMarkValue = myanMark.value.trim();
+    const engMarkValue = engMark.value.trim();
+    const mathMarkValue = mathMark.value.trim();
+    const phyMarkValue = phyMark.value.trim();
+    const cheMarkValue = cheMark.value.trim();
+    const bioMarkValue = bioMark.value.trim();
+
+    
+    if(fnameValue === ''){
+        setError(fname, '*Your Name is Required!');
+    }else{
+        setSuccess(fname);
+    }
+
+    if(myanMarkValue === ''){
+        setError(myanMark, '*Myanmar Mark is Required!');
+    }else{
+        setSuccess(myanMark);
+    }
+
+    if(engMarkValue === ''){
+        setError(engMark, '*English Mark is Required!');
+    }else{
+        setSuccess(engMark);
+    }
+
+    if(mathMarkValue === ''){
+        setError(mathMark, '*Mathematic Mark is Required!');
+    }else{
+        setSuccess(mathMark);
+    }
+
+    if(phyMarkValue === ''){
+        setError(phyMark, '*Physics Mark is Required!');
+    }else{
+        setSuccess(phyMark);
+    }
+
+    if(cheMarkValue === ''){
+        setError(cheMark, '*Chemistry Mark is Required!');
+    }else{
+        setSuccess(cheMark);
+    }
+
+    if(bioMarkValue === ''){
+        setError(bioMark, '*Biology Mark is Required!');
+    }else{
+        setSuccess(bioMark);
+    }
+
+    if(fnameValue !== '' && myanMarkValue !== '' && engMarkValue !== '' && mathMarkValue !== '' && phyMarkValue !== '' && cheMarkValue !== '' && bioMarkValue !== ''){
+        show();
+    }
+    
+}
+
+        let resultArray = [];
+        function show(){
+            let name = document.myForm.name.value;
+            let myanmar = parseInt(document.myForm.myanmar.value);
+            let english = parseInt(document.myForm.english.value);
+            let mathematics= parseInt(document.myForm.mathematics.value);
+            let chemistry =parseInt( document.myForm.chemistry.value);
+            let physics =parseInt( document.myForm.physics.value);
+            let biology = parseInt(document.myForm.biology.value);
+            let total =myanmar+english+mathematics+chemistry+physics+biology;
+
+            let result ={
+                stuName:name,
+                Myanmar:myanmar,
+                English:english,
+                Mathematics:mathematics,
+                Chemistry:chemistry,
+                Physics:physics,
+                Biology:biology,
+                Total:total
+            }
+            resultArray.push(result);
+            console.log(resultArray);
+
+            let data ='';         
+            for(let i=0;i<resultArray.length;i++){
+                let resultList = resultArray[i] ;
+                data = data + `
+                    <tr>
+                        <td>${i+1}</td>
+                        <td>${resultList.stuName}</td>
+                        <td>${resultList.Myanmar}</td>
+                        <td>${resultList.English}</td>
+                        <td>${resultList.Mathematics}</td>
+                        <td>${resultList.Chemistry}</td>
+                        <td>${resultList.Physics}</td>
+                        <td>${resultList.Biology}</td>
+                        <td>${resultList.Total}</td>
+                    </tr>`;
+
+                let studentName=resultList.stuName;
+                let myan=resultList.Myanmar;
+                let eng=resultList.English;
+                let math=resultList.Mathematics;
+                let chem=resultList.Chemistry;
+                let phys=resultList.Physics;
+                let bio=resultList.Biology;
+            
+                let passFail=document.getElementById('pass_fail');
+                if(myan>=40 && eng>=40 && math>=40 && chem>=40 && phys>=40 && bio>=40){
+                    if(myan>=75 && eng>=75 && math>=80 && chem>=80&& phys>=80 && bio>=75){
+                        passFail.innerHTML=`${studentName} has passed the exam with All Ds.`;
+                    }else if(myan>=75 || eng>=75 || math>=80 || chem>=80|| phys>=80 || bio>=75){
+                        passFail.innerHTML=`${studentName} has passed the exam with D.`;
+                    }else{
+                        passFail.innerHTML=`${studentName} has passed the exam.`;
+                    }
+                }
+                else{
+                    passFail.innerHTML=`${studentName} has failed
+                    the exam.`;
+                }
+
+                    
+            }
+            
+            document.getElementById('myData').innerHTML = data;
+        }
+
+    </script>
+
+</body>
+</html>

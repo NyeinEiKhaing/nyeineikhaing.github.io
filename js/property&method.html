@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peoperty & Method</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Property & Method</h1>
+    <h2 id="createTextNode"></h2>
+    <button onclick="createText()">Create Text Node</button>
+    <br><br>
+
+    <button onclick="createElementTag()"> Create Element</button>
+    <br><br>
+
+    <p id="set_attribute">This is set Attribute.</p>
+    <button onclick="set_attribute()">Set Attribute</button>
+    <br><br>
+
+    <p id="get_attribute" style="background-color:red;">This is Get Attribute</p>
+    <button onclick="get_attribute()">Get Attribute</button>
+    <br><br>
+
+    <p id="remove_attribute" style="color:brown">Remove Attribute</p>
+    <button onclick="remove_attribute()">Remove Attribute</button>
+
+    <script>
+        function createText(){
+            // alert("ok");
+            let createTextNodeValue=document.createTextNode("This is Text Node");
+           let createTextNodeSelector=document.getElementById('createTextNode');
+           createTextNodeSelector.appendChild(createTextNodeValue);
+        }
+
+        function createElementTag(){
+           // alert('ok');
+           let h3=document.createElement('div');
+           console.log(h3);
+           h3.innerText="This is Create Element";
+           document.body.appendChild(h3);
+        }
+
+        function set_attribute(){
+            //alert('ok');
+            let setAttributeSelector=document.querySelector('#set_attribute');
+            //console.log(setAttributeSelector);
+            setAttributeSelector.setAttribute('style','color:green');
+        }
+
+        function get_attribute(){
+            // alert('ok');
+            let getAttribureSelector=document.getElementById('get_attribute');
+            getAttribureSelector.getAttribute('id');
+        }
+
+        function remove_attribute(){
+            // alert('ok');
+            let removeAttributeSelector=document.getElementById('remove_attribute');
+           let res= removeAttributeSelector.getAttribute('style');
+           if(res=="color:brown"){
+            removeAttributeSelector.removeAttribute('style');
+            removeAttributeSelector.setAttribute('style','color:green');
+
+           }else{
+                removeAttributeSelector.setAttribute('style','color:brown');
+           }
+        }
+
+    </script>
+</body>
+</html>

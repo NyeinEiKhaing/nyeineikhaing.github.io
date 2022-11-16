@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>JS validation</h1>
+    <form action="" method="post" onsubmit="return checkValue()">
+        Name: <input type="text" id="name" name="name"><br>
+        Password: <input type="password" id="password" name="password"><br>
+        Confirm Password: <input type="password" id="confirm_password" name="confirm_password"><br>
+        <input type="submit" value="Send">
+    </form>
+
+    <script>
+        function checkValue(){
+            // alert('ok');
+            let name=document.getElementById('name').value;
+            let password=document.getElementById('password').value;
+            let confirm_password=document.getElementById('confrim_password').value;
+
+            if(name.length < 3){
+                // alert('Name required need At least 4 char');
+                let name_error=document.getElementById('name');
+                name_error.style.borderColor="red";
+                return false;
+            }
+
+            if(password == "" || confirm_password==""){
+                alert("Pleasee fill Password And Confirm password");
+                return false;
+            }
+            if(password!= confirm_password){
+                alert("Does not match")
+                return false;
+            }else{
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>

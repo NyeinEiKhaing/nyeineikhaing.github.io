@@ -17,21 +17,25 @@
 
     <h2>Monthly Food Cost</h2>
     <table  border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <td>No</td>
+                <td>Date</td>
+                <td>Amount</td>
+                <td>Total</td>
+            </tr>
+            
+        </thead>
         <tbody id="myData">
-            <thead>
-                <tr>
-                    <td>No</td>
-                    <td>Date</td>
-                    <td>Amount</td>
-                    <td>Total</td>
-                </tr>
-                <tr>
-                    <td colspan="3">Grand Total</td>
-                    <td id="grand_total"></td>
-                </tr>
-            </thead>
             
         </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Grand Total</td>
+                <td id="grand_total"></td>
+            </tr>
+           
+        </tfoot>
     </table>
 
     <script>
@@ -39,17 +43,19 @@
         function show(){
             let date = document.myForm.date.value;
             let amount = document.myForm.amount.value;
-            let total = document.myForm.amount.value;
+            // let total = document.myForm.amount.value;
 
             let food ={
                 foodDate:date,
                 foodAmount:amount,
-                foodTotal:total
+                foodTotal:amount
             }
             foodGrandTotalArray.push(food);
+            console.log(foodGrandTotalArray);
 
-            let data ='';         
-            for(let i=0;i<foodGrandTotal.length;i++){
+            let data ='';  
+            let grand_total =0;       
+            for(let i=0;i<foodGrandTotalArray.length;i++){
                 let foodCostList = foodGrandTotalArray[i] ;
                 data = data + `
                     <tr>
@@ -58,13 +64,12 @@
                         <td>${foodCostList.foodAmount}</td>
                         <td>${foodCostList.foodTotal}</td>
                     </tr>`;
+                    
+                     grand_total += parseInt(foodCostList.foodTotal) ;
+                    document.getElementById('grand_total').innerHTML =grand_total;
             }
-
-            document.getElementById('myData') = data;
-
-            for(let j=0;j<data.length;j++){
-                let granttoatl =``;
-            }
+            
+            document.getElementById('myData').innerHTML = data;
             
         }
     </script>
