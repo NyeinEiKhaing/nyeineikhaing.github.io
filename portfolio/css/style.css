@@ -1,0 +1,18 @@
+.fa-facebook{
+    font-size: 35px;
+    position: relative;
+    top: 9px;
+    left: 5px;
+}
+.aboutMe{
+    text-align: justify;
+    font-size: 20px;
+    line-height: 40px;
+}
+.about{
+    margin-top: 100px;
+}
+.home{
+    padding-top: 100px;
+    margin-bottom: 50px;
+}
