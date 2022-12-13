@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <script src="fontawesome/js/all.min.js"></script>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -50,9 +49,9 @@
             <div class="col-xl-3">
                 <div class="card">
                     <img src="https://dlcdnwebimgs.asus.com/gain/99ae25d3-14c1-4be2-9666-aada95484a7a/" alt="" class="card-img-top">
-                    <h5 class="pt-3 px-3 text-center">Asus Zenbook 14 Flip OLED</h5>
-                    <p class="text-center">$ 999</p>
-                    <button class="btn btn-outline-danger d-block mx-3 mb-3"> <a href="" class="nav-link d-inline pe-2"><i class="fa-solid fa-cart-shopping"></i></a>Add to card</button>
+                    <h5 class="pt-3 px-3 text-center">laptop1</h5>
+                    <p class="text-center">Price : 2300000 MMK</p>
+                    <button class="btn btn-outline-danger d-block mx-3 mb-3 addToCart" data-id="1" data-name="laptop1" data-price="2300000"> <a href="" class="nav-link d-inline pe-2"><i class="fa-solid fa-cart-shopping"></i></a>Add to cart</button>
                 </div>
             </div>
 
@@ -262,6 +261,15 @@
     <script src="../jquery.min.js"></script>
     <script>
         $(document).ready(function () {
+
+            $('.addToCart').click(function(){
+                
+                let id = $(this).data('id');
+                let name = $(this).data('name');
+                let price = $(this).data('price');
+                console.log(id,name,price);
+            })
+
             $("#all").click(function(){
                 $(".computer").show("slow");
                 $(".keyboard").show("slow");
