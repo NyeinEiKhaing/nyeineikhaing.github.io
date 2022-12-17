@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckOut</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+  <!-- nav start -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+    <div class="container">
+        <a href="" class="navbar-brand me-auto">IT Shop</a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#Navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="Navbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class=" nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Products Categories</a>
+                    <ul class="dropdown-menu">
+                        <li><button class="dropdown-item" id="all">All Categories</button></li>
+                        <li><button class="dropdown-item" id="computer">Computer</button></li>
+                        <li><button class="dropdown-item" id="keyboard">Keyboard</button></li>
+                        <li><button class="dropdown-item" id="mouse">Mouse</button></li>
+                        <li><button class="dropdown-item" id="headphone">Headphone</button></li>
+                        <li><button class="dropdown-item" id="laptopbag">Laptop HandBag</button></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="check.html" >
+                    <button type="button" class="btn btn-link btn-primary position-relative">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="count_number">
+                          
+                          <span class="visually-hidden">unread messages</span>
+                        </span>
+                      </button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- nav end -->
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">Item Price</th>
+            <th scope="col">Qty</th>
+            <th scope="col">Sub Total</th>
+          </tr>
+        </thead>
+        <tbody id="data_body">
+  
+        </tbody>
+      </table>
+
+      <div class="row">
+        <div class="offset-md-4 col-md-4">
+          <button class="btn btn-success" type="button" id="order">Order Now</button>
+        </div>
+      </div>
+      
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../jquery.min.js"></script>
+    <script src="count.js"></script>
+    <script>
+
+      $(document).ready(function () {
+
+        count();
+        getData();
+
+        function getData(){
+          let itemStr = localStorage.getItem('shops');
+          console.log(itemStr);
+          if(itemStr){
+            let itemArr = JSON.parse(itemStr);
+            let data = '';
+            let j = 1;
+            let total = 0;
+
+            $.each(item,function(i,v){
+              data += `<tr>
+                <td>${J++}</td>
+                <td>${v.item_name}</td>
+                <td>${v.item_price}</td>
+                <td>
+                  <button class="btn btn-sm btn-outline-secondary min" data-item_i="${i}"> - </button>
+                  ${v.qty} 
+                  <button class="btn btn-sm btn-outline-secondary max"> + </button>
+                </td>
+                <td>${v.item_price * v.qty}</td>
+              </tr> `
+
+              total += v.item_price * v.qty;
+
+            });
+            data += `<td colspan="4">Total</td>
+             <td>${total}</td>`
+
+            $('#data_body').html(data);
+          }else{
+            let data = '';
+            $('#data_body').html(data); // string သာပါမလာခဲ့ရင် ဖြတ်ချချင်လို့မို့    else statement ကိုသုံးတာ
+          }
+      }
+
+        $('#data_body').on('click', 'min',function () {
+          // alert('Hi min');
+          let item_i = $(this).data('item_i');
+          let itemStr = localStorage.getItem('shops');
+          if(itemStr){
+            let itemArr = JSON.parse(itemStr);
+
+            $.each(itemArr, function(i,v) {
+              if(item_i == i){
+                v.qty--;
+                if(v.qty == 0){
+                  itemArr.splice(item_i,1);   // ဖြတ်ချချင်လို့  splice ကိုသုံးတာ
+                }
+
+              }
+            });
+
+            let itemData = JSON.stringify(itemArr);
+            localStorage.setItem('shops',itemData);
+            getData();
+            count();
+          }
+          
+        });
+
+        $('#data_body').on('click', 'max',function () {
+          // alert('Hi max');
+          let item_i = $(this).data('item_i');
+          let itemStr = localStorage.getItem('shops');
+          if(itemStr){
+            let itemArr = JSON.parse(itemStr);
+
+            $.each(itemArr, function(i,v) {
+              if(item_i == i){
+                v.qty++;
+              }
+            });
+
+            let itemData = JSON.stringify(itemArr);
+            localStorage.setItem('shops',itemData);
+            getData();
+            count();
+          }
+          
+        });
+
+        $('#order').click(function (e) { 
+          e.preventDefault();
+          localStorage.clear();
+          getData();
+          count();
+        });
+
+      });
+
+    </script>
+</body>
+</html>
