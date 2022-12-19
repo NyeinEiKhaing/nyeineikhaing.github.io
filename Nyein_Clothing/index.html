@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nyein Clothing</title>
+    <link rel="icon" href="image/Nfashion.png">
+
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <link rel="stylesheet" href="css/custom.css">
@@ -12,25 +14,168 @@
 <body>
     
     <!-- nav bar start -->
-    <div class="container">
         <nav class="bg-danger">
-            <div class="row">
-                <div class="col-6">
-                    <small>
-                        
-                    </small>
-                </div>
-                <div class="col-6">
-
+            <div class="container">
+                <div class="row text-white">
+                    <div class="col-6">
+                        <small>
+                            <span class="d-none d-md-inline-block"><i class="fa-regular fa-envelope"></i> contact@nyeinfashion.com</span>
+                            <span class="ps-3"><i class="fa-solid fa-square-phone"></i> +959772192264</span> 
+                        </small>
+                    </div>
+                    <div class="col-6 text-end">
+                        <small>
+                            Follow Us : 
+                            <a href="" class="text-white pe-2"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="" class="text-white pe-2"><i class="fa-brands fa-viber"></i></a>
+                            <a href="" class="text-white pe-2"><i class="fa-brands fa-instagram"></i></a>
+                        </small>
+                    </div>
                 </div>
             </div>
         </nav>
-    </div>
     <!-- nav bar end -->
 
+    <!-- sub nav bar start -->
+    <nav class="navbar navbar-expand-md shadow-sm navbar-ligth bg-light">
+        <div class="container">
+            <img src="image/Nfashion.png" alt="" width="100">
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active"><a href="" class="nav-link">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">Product</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="" class="dropdown-item">Men</a></li>
+                            <li><a href="" class="dropdown-item">Woman</a></li>
+                            <li><a href="" class="dropdown-item">Kid's</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="" class="nav-link">Promotion</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- sub nav bar end -->
+
+    <!-- bunner start -->
+    <div class="carousel carousel-fade" data-bs-ride="carousel" id="Carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="image/carousel1.jpg" alt="" class="img-fluid w-100" style="height:400px;">
+                <div class="carousel_text d-none d-md-block">
+                    <h4>Welcome To Our Nyein Fashion</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Non,  ipsa ullam nam voluptate quibusdam doloribus, <br> fuga iusto  odio ex laborum aperiam modi!
+                    </p>
+                    <button class="btn btn-danger">Shop Now</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="image/carousel2.jpg" alt="" class="img-fluid w-100" style="height:400px;"><div class="carousel_text d-none d-md-block">
+                    <h4>Welcome To Our Nyein Fashion</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Non,  ipsa ullam nam voluptate quibusdam doloribus, <br> fuga iusto  odio ex laborum aperiam modi!
+                    </p>
+                    <button class="btn btn-danger">Shop Now</button>
+                </div>
+
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" data-bs-target="#Carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" data-bs-target="#Carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <!-- bunner end -->
+
+    <!-- service start -->
+    <div class="container my-5">
+        <div class="row">
+            <div class=" col-md-6 col-lg-3 my-2">
+                <div class="card pt-3 px-2">
+                    <div class="row">
+                        <div class="col-4 col-md-3 text-center">
+                            <i class="fa-solid fa-truck-fast fa-2x pt-3"></i>
+                        </div>
+                        <div class="col-8 col-md-9">
+                            <h5>Fast & Free Shipping</h5>
+                            <p>For orders from $100</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-2">
+                <div class="card pt-3 px-2">
+                    <div class="row">
+                        <div class="col-4 col-md-3 text-center">
+                            <i class="fa-solid fa-headset fa-2x pt-3"></i>
+                        </div>
+                        <div class="col-8 col-md-9">
+                            <h5>Support 24/7</h5>
+                            <p>Call us anytime</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-2">
+                <div class="card pt-3 px-2">
+                    <div class="row">
+                        <div class="col-4 col-md-3 text-center">
+                            <i class="fa-solid fa-user-shield fa-2x pt-3"></i>
+                        </div>
+                        <div class="col-8 col-md-9">
+                            <h5>100% Safety</h5>
+                            <p>Only secure payments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-2">
+                <div class="card pt-3 px-2">
+                    <div class="row">
+                        <div class="col-4 col-md-3 text-center">
+                            <i class="fa-solid fa-gift fa-2x pt-3"></i>
+                        </div>
+                        <div class="col-8 col-md-9">
+                            <h5>Gift Promotion</h5>
+                            <p>Discount up to 90%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- service end -->
+
+    <!-- promotion start -->
+    <div class="container">
+        <div class="wrapper">
+            <div class="my-slider">
+                <div>Slide 1</div>
+                <div>Slide 2</div>
+                <div>Slide 3</div>
+                <div>Slide 4</div>
+                <div>Slide 5</div>
+                <div>Slide 6</div>
+            </div>
+        </div>
+    </div>
+    <!-- promotion end -->
 
     <!-- new arrival start -->
-    <div class="container">
+    <!-- <div class="container">
         <h4>New Arrival</h4>
         <hr class="divided pt-0 mt-0">
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4     row-cols-xl-5">
@@ -46,11 +191,13 @@
             </div>
 
         </div>
-    </div>
-
+    </div> -->
     <!-- new arrival end -->
 
+    <script src="js/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="fontawesome/js/all.min.js"></script>
+    <script src="js/custom.js"></script>
+    
 </body>
 </html>
