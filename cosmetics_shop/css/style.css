@@ -1,0 +1,46 @@
+.navbar{
+    background-color: rgb(235, 137, 38);
+}
+
+/* searchbar start */
+.btn,.btn:hover{
+    background-color: rgb(235, 137, 38);
+}
+.fa-cart-shopping{
+    color: rgb(235, 137, 38);
+}
+.form-control{
+    border-color:rgb(235, 137, 38) ;
+}
+/* searchbar end */
+
+/* carousel */
+.carousel_text{
+    position: absolute;
+    top: 120px;
+    left: 170px;
+    background-color:rgba(0, 0, 0, 0.35);
+    padding: 20px;
+    color: white;
+}
+
+@media (max-width: 991.98px) { 
+    .carousel_text{
+        position: absolute;
+        top: 80px;
+        left: 150px;
+        background-color:rgba(0, 0, 0, 0.35);
+        padding: 20px;
+        color: white;
+    }
+ }
+
+
+/* footer start */
+.footer{
+    background-color: rgb(235, 137, 38);
+}
+.fa-facebook,.fa-twitter,.fa-instagram,.fa-youtube{
+    color: rgb(235, 137, 38);
+}
+/* footer end */
