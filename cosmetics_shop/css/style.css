@@ -1,16 +1,16 @@
 .navbar{
-    background-color: rgb(235, 137, 38);
+    background-color: #FF74D1;
 }
 
 /* searchbar start */
 .btn,.btn:hover{
-    background-color: rgb(235, 137, 38);
+    background-color: #FF74D1;
 }
 .fa-cart-shopping{
-    color: rgb(235, 137, 38);
+    color: #FF74D1;
 }
 .form-control{
-    border-color:rgb(235, 137, 38) ;
+    border-color:#FF74D1 ;
 }
 /* searchbar end */
 
@@ -38,9 +38,9 @@
 
 /* footer start */
 .footer{
-    background-color: rgb(235, 137, 38);
+    background-color: #FF74D1;
 }
 .fa-facebook,.fa-twitter,.fa-instagram,.fa-youtube{
-    color: rgb(235, 137, 38);
+    color: #FF74D1;
 }
 /* footer end */
