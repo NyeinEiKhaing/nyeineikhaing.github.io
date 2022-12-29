@@ -237,4 +237,10 @@ a .btn{
 }
 /* add to cart end */
 
+/* rating star start */
+.checked {
+    color: orange;
+  }
+  /* rating star end */
+
 
