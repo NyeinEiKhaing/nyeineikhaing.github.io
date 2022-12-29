@@ -224,11 +224,14 @@ a .btn{
   background-color:#fd30b9;
 }
 /* choose brand end */
-
+    
 /* add to cart start */
+.fa-cart-shopping{
+    font-size: 30px;
+}
 #count_number{
     position: relative;
-    top: -15px;
+    top: -25px;
     left: -5px;
     background-color: red;
 }
