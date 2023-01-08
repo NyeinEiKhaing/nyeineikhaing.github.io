@@ -203,3 +203,9 @@ hr.new2 {
     border-top: 1px dashed rgb(71, 71, 126);
   }
 /* location end */
+
+/* room_service start */
+.room_service{
+    margin-top: 1px;
+}
+/* room_service end */
