@@ -15,7 +15,7 @@
     }
     .header{
         color: gold;
-        margin-top: 30px;
+        margin-top: 20px;
     }
 
     .carousel_text{
@@ -191,3 +191,15 @@
     background-color: rgb(71, 71, 126);
 }
 /* footer end */
+
+/* reservation start */
+.reservation{
+    background-color: rgb(71, 71, 126);
+}
+/* reservation end */
+
+/* location start */
+hr.new2 {
+    border-top: 1px dashed rgb(71, 71, 126);
+  }
+/* location end */
