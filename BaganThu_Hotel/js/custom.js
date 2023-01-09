@@ -1,3 +1,4 @@
+// slide start
 $(document).ready(function(){
     $('.customer-logos').slick({
         slidesToShow: 4,
@@ -20,3 +21,13 @@ $(document).ready(function(){
         }]
     });
 });
+// slide end
+
+// swap image start
+$(document).ready(function () {
+    $('.swap_img .slides > img').click(function(){
+        var $smallImages = $(this).attr('src');
+        $('.big_screen > img').attr('src',$smallImages)
+    });
+});
+// swap image end
