@@ -446,3 +446,73 @@ body .swap_img{
     opacity: 1;
 }
 
+/* text review start */
+.text_review{
+    font-weight: bold;
+}
+
+.dotted{
+    font-weight: bold;
+    font-size: x-large;
+}
+.text_bold{
+    font-weight: bold;
+}
+.padding_text{
+    position: absolute;
+    top: 300px;
+    padding-left: 10px;
+}
+.fa-location-dot{
+    font-size: small;
+}
+.checked {
+    color: rgb(32, 232, 128);
+}
+a .text_hover:hover{
+    color: rgb(0, 76, 255);
+    text-decoration-line: underline;
+}
+.text_small{
+    font-size: small;
+}
+.text_social{
+    font-size: small;
+}
+a .textSocial{
+    font-weight: bolder;
+}
+a .textSocial:hover{
+    color: rgb(0, 76, 255);
+    text-decoration-line: underline;
+}
+.padding_text1{
+    position: absolute;
+    top: 830px;
+    padding-left: 10px;
+}
+.padding_text2{
+    position: absolute;
+    top: 1323px;
+    padding-left: 10px;
+}
+/* text review end */
+
+/* read less read more button start */
+#more {display: none;}
+#more1 {display: none;}
+#more2 {display: none;}
+
+.text_black{
+    font-weight: bolder;
+}
+.text_font{
+    font-size: 15px;
+}
+a .seeMore_room:hover{
+    text-decoration-line: underline;
+}
+/* read less read more button end */
+
+
+
