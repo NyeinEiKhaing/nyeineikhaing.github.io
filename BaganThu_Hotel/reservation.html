@@ -11,6 +11,7 @@
     <script src="fontawesome/js/all.min.js"></script>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flatpickr.min.css">
 </head>
 <body>
 
@@ -97,7 +98,7 @@
                     <div class="col-12 col-md-3">
                         <p>Check In</p> 
                         <div class="from-group">
-                            <input type="date" class="form-control border-0 w-75">
+                            <input type="datetime-local" placeholder="check in" class="form-control border-0 w-75">
                         </div>
                     </div>
                     <div class="col-12 col-md-3">
@@ -213,5 +214,10 @@
     <script src="js/slick.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/flatpickr.min.js"></script>
+
+    <script>
+        flatpickr("input[type=datetime-local]", {});
+    </script>
 </body>
 </html>

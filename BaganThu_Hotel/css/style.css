@@ -20,12 +20,11 @@
 
     .carousel_text{
         position: absolute;
-        top: 120px;
-        left: 170px;
+        top: 90px;
+        right: 170px;
         background-color:rgba(0, 0, 0, 0.5);
         padding: 20px;
         color: white;
-        float: right;
     }
 
     /* Slider */
@@ -280,7 +279,170 @@ body .swap_img{
 /* contact start */
 .contactbg{
     background-color: rgb(71, 71, 126);
-    border-radius:10px 80px 500px 150px;
+    border-radius:10px 40px 100px 300px;
 }
 /* contact end */
+
+/* slide left start */
+.slide_lefttext {
+    position: relative;
+    width: 100%;
+  }
+  
+  .image1 {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(71, 71, 126,0.4);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+  }
+  
+  .slide_lefttext:hover .overlay1 {
+    width: 100%;
+  }
+  
+  .text1 {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+/* slide left end */
+
+/* slide bottom start */
+.slide_bottomtext {
+    position: relative;
+    width: 50%;
+  }
+  
+  .image2 {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(71, 71, 126,0.4);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+  }
+  
+  .slide_bottomtext:hover .overlay2 {
+    height: 100%;
+  }
+  
+  .text2 {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+/* slide bottom end */
+
+/* service image text slider top hover start */
+.img_textsliderhover {
+    position: relative;
+    width: 50%;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.345);
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+  }
+  
+  .img_textsliderhover:hover .overlay {
+    bottom: 0;
+    height: 100%;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+/* service image text slider hover end */
+
+.zoomin{
+    position: relative;
+    transform: scale(0);
+    /* transform: translateY(150px); */
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.zoomin.active{
+    transform: scale(1);
+    opacity: 1;
+}
+
+.leftin{
+    position: relative;
+    transform: translateX(-500px);
+    /* transform: translateY(150px); */
+    opacity: 0;
+    transition: 1s all ease;
+}
+  
+.leftin.Leftin{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.rightin{
+    position: relative;
+    transform: translateX(500px);
+    /* transform: translateY(150px); */
+    opacity: 0;
+    transition: 1s all ease;
+}
+  
+.rightin.Rightin{
+    transform: translateX(0);
+    opacity: 1;
+}
 
