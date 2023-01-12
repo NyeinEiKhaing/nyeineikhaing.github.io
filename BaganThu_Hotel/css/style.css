@@ -463,7 +463,7 @@ body .swap_img{
 }
 .padding_text{
     position: absolute;
-    top: 25px;
+    top: 20px;
     padding-left: 10px;
     font-size: small;
 }
@@ -672,11 +672,11 @@ a .seeMore_room:hover{
   }
   /* end */
 
-
-  /* .user_rating{
-    font-size: small;
-  } */
-  /* user rating end */
+/* user rating start */
+  .user_rating{
+    width: auto;
+  } 
+  /* user rating end
 
 
 
