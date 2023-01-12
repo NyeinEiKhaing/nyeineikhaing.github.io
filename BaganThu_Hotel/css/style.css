@@ -458,13 +458,17 @@ body .swap_img{
 .text_bold{
     font-weight: bold;
 }
+.review_location{
+  position: relative;
+}
 .padding_text{
     position: absolute;
-    top: 675px;
+    top: 25px;
     padding-left: 10px;
+    font-size: small;
 }
 .fa-location-dot{
-    font-size: small;
+    font-size: smaller;
 }
 .checked {
     color: rgb(32, 232, 128);
@@ -486,16 +490,7 @@ a .textSocial:hover{
     color: rgb(0, 76, 255);
     text-decoration-line: underline;
 }
-.padding_text1{
-    position: absolute;
-    top: 1205px;
-    padding-left: 10px;
-}
-.padding_text2{
-    position: absolute;
-    top: 1703px;
-    padding-left: 10px;
-}
+
 /* text review end */
 
 /* read less read more button start */
