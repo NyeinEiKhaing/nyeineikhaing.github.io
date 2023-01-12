@@ -223,7 +223,7 @@ body .swap_img{
     margin: 50px auto;
     overflow: hidden;
     position: relative;
-    box-shadow: 0px 0px 15px #333;
+    /* box-shadow: 0px 0px 15px #333; */
 }
 .swap_img .slides{
     height: calc(20% - 5px);
@@ -279,7 +279,7 @@ body .swap_img{
 /* contact start */
 .contactbg{
     background-color: rgb(71, 71, 126);
-    border-radius:10px 40px 100px 300px;
+    border-radius:30px;
 }
 /* contact end */
 
@@ -676,7 +676,12 @@ a .seeMore_room:hover{
   .user_rating{
     width: auto;
   } 
-  /* user rating end
+  /* user rating end */
+
+  .about_contact{
+    font-size: 12px;
+  }
+
 
 
 
