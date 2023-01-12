@@ -556,6 +556,13 @@ a .seeMore_room:hover{
 /* write reviews dropdown end */
 
 /* user rating start */
+/* .user_rating {
+    /* font-family: Arial; */
+    margin: 0 auto; /* Center website */
+    max-width: 800px; /* Max width */
+    padding: 20px;
+  } */
+  
 .fa {
     font-size: 25px;
   }
