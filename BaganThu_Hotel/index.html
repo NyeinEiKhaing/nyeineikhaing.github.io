@@ -11,7 +11,8 @@
     <script src="fontawesome/js/all.min.js"></script>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/annimate.min.css">
+    <!-- <link rel="stylesheet" href="css/annimate.min.css"> -->
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/flatpickr.min.css">
 </head>
 <body>
@@ -81,7 +82,7 @@
     <!-- sub nav bar end -->
 
     <!-- bunner start -->
-    <div class="carousel carousel-fade" data-bs-ride="carousel" id="Carousel">
+    <div class="carousel carousel-fade" data-bs-ride="carousel" id="Carousel" style="overflow: hidden;">
         <div class="carousel-inner zoomin">
             <div class="carousel-item active">
                 <img src="image/bhcarousel6.jpg" alt="" class="img-fluid w-100" style="height:400px;">
@@ -306,7 +307,7 @@
     <!--facilities end -->
 
     <!-- footer start -->
-    <div class="container-fluid footer text-white mt-3">
+    <div class="footer text-white mt-3">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-4 mt-5 ">
@@ -315,6 +316,13 @@
                     <p>Phone : +959-772-192-264</p>
                     <p>Hotline : +959-979-313-756</p>
                     <p>Email : baganthu123@gmail.com</p>
+
+                    <div  class="text-start">
+                        <a href="""><i class="fa-brands fa-2x text-white px-2 pb-2 fa-facebook"></i></a>
+                        <a href="""><i class="fa-brands fa-2x text-white px-2 pb-2 fa-instagram"></i></a>
+                        <a href="""><i class="fa-brands fa-2x text-white px-2 pb-2 fa-twitter"></i></a>
+                        <a href=""></a>
+                    </div>
                 </div>
                 <div class="col-12 col-md-4 mt-5">
                     <h4 class="pb-2">Sale & Reservation Office</h4>
@@ -327,38 +335,29 @@
                         <img src="image/r.png" alt="" class="img-fluid">
                     </a>
                 </div>
-                <div  class="text-center">
-                    <a href="""><i class="fa-brands fa-2x text-white px-2 pb-2 fa-facebook"></i></a>
-                    <a href="""><i class="fa-brands fa-2x text-white px-2 pb-2 fa-instagram"></i></a>
-                    <a href="""><i class="fa-brands fa-2x text-white px-2 pb-2 fa-twitter"></i></a>
-                    <a href=""></a>
-                </div>
-                <hr>
-                <div class="pb-3 text-center pt-0 mt-0">
+            </div>
+        </div>
+
+        <!--Waves Container-->
+        <div class="footer_animate">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(128, 166, 205,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(128, 166, 205,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(128, 166, 205,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#84AACF" />
+                </g>
+            </svg>
+            <div class="text-center p-4" style="background-color: #84AACF; color:black">
                 &copy;2022 BaganThu Hotel designed by Nyein . All Rights Reserved.
-                </div>
             </div>
         </div>
     </div>
 
-    <div>
-        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-       <defs>
-       <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-       </defs>
-       <g class="parallax">
-           <use xlink:href="#gentle-wave" x="48" y="0" fill="rgb(71, 71, 126,0.7)" />
-           <use xlink:href="#gentle-wave" x="48" y="3" fill="rgb(71, 71, 126,0.5)" />
-           <use xlink:href="#gentle-wave" x="48" y="5" fill="rgb(71, 71, 126,0.3)" />
-           <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(71, 71, 126)" />
-       </g>
-       </svg>
-       <!-- <div class="text-center p-4" style="background-color: ; color:#032D30">
-         © 2023 Copyright:
-         <a class="text-reset text-decoration-none fw-bold" style="color:#032D30" href="">TECH BY AMT</a>
-         </div> -->
-   </div>
     <!-- footer end -->
 
     <script src="js/jquery.min.js"></script>
