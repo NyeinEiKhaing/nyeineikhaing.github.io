@@ -276,6 +276,14 @@ body .swap_img{
 }
 /* divided hr line end */
 
+/* location start */
+.bg_text{
+  background-color: rgb(71, 71, 126);
+  color: white;
+
+}
+/* location end */
+
 /* contact start */
 .contactbg{
     background-color: rgb(71, 71, 126);
